@@ -13,11 +13,17 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
-  if (err) throw err;  
+boot(app, __dirname);
 
-  // start the server if `$ node server.js`
-  if (require.main === module) {
+var path = require('path');
+app.use(loopback.static(path.resolve(__dirname, '../client')));
+
+app.use(loopback.urlNotFound());
+
+// The ultimate error handler.
+app.use(loopback.errorHandler());
+
+  
+if (require.main === module) {
     app.start();
-  }
-});
+}
