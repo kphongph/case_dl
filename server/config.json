@@ -1,0 +1,28 @@
+ {
+  "restApiRoot": "/api",
+  "port": 8080,
+  "remoting": {
+    "context": {
+      "enableHttpContext": true
+    },
+    "rest": {
+      "normalizeHttpPath": true,
+      "xml": true
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": {
+      "origin": true,
+      "credentials": true
+    },
+    "errorHandler": {
+      "disableStackTrace": false
+    }
+  }
+}

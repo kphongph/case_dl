@@ -1,0 +1,11 @@
+{
+  "hostDs": {
+    "name": "hostDs",
+    "connector": "mssql",
+    "host":"..",
+    "database":"..",
+    "username":"..",
+    "password":"..",
+    "port":1433
+  }
+}
