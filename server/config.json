@@ -7,7 +7,7 @@
     },
     "rest": {
       "normalizeHttpPath": true,
-      "xml": true
+      "xml": false
     },
     "json": {
       "strict": false,

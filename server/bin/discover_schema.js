@@ -1,9 +1,11 @@
 var path = require('path');
 var app = require(path.resolve(__dirname, '../server'));
 
-var dataSource = app.dataSources.hostDs;
+var dataSource = app.dataSources.caseDs;
 
-dataSource.discoverSchema('Host', {schema: 'dbo'},
+var table = process.argv[2];
+
+dataSource.discoverSchema(table, {schema: 'dbo'},
     function(err, schema) {
   if (err) throw err;
 

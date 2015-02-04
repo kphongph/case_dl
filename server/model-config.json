@@ -7,7 +7,19 @@
     ]
   },
   "Host": {
-    "dataSource": "hostDs",
+    "dataSource": "caseDs",
+    "public": true
+  },
+  "Province": {
+    "dataSource": "caseDs",
+    "public": true
+  },
+  "City": {
+    "dataSource": "caseDs",
+    "public": true
+  },
+  "Person": {
+    "dataSource": "caseDs",
     "public": true
   }
 }
