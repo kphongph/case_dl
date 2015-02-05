@@ -2,15 +2,16 @@
 
 angular
   .module('app', [
+    'lbServices',
     'ui.router'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
     $stateProvider
-      .state('people', {
+      .state('person', {
         url: '',
-        templateUrl: 'js/people/templates/people.html',
-        controller: 'PeopleCtrl'
+        templateUrl: 'js/person/templates/person.html',
+        controller: 'PersonCtrl'
       });
-    $urlRouterProvider.otherwise('people');
+    $urlRouterProvider.otherwise('person');
   }]);
